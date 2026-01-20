@@ -1,0 +1,749 @@
+/* ============================================ */
+/* ESTILOS CSS - VERSIÓN FINAL */
+/* ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* ============================================ */
+/* 1. BODY CON ESCUDO COMO MARCA DE AGUA - AJUSTE SOLICITADO */
+/* ============================================ */
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    /* FONDO CON MARCA DE AGUA DEL ESCUDO - AJUSTADO */
+    background-image: url('/images/escudo75.jpeg');
+    background-size: 600px; /* MÁS GRANDE */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* AJUSTE DE OPACIDAD */
+    position: relative;
+}
+
+/* Capa para controlar opacidad del fondo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* MÁS OPACO PARA MEJOR LEGIBILIDAD */
+    z-index: -1;
+}
+
+/* Capa con la imagen del escudo */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/escudo75.jpeg');
+    background-size: 600px; /* MÁS GRANDE */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.15; /* MÁS TRANSPARENTE EL ESCUDO */
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* ============================================ */
+/* 2. CONTENIDO PRINCIPAL SIN FONDO */
+/* ============================================ */
+.main-content {
+    flex: 1;
+    padding: 30px 0;
+}
+
+/* ============================================ */
+/* HEADER - SIN CAMBIOS (COMO ESTABA ESPECTACULAR) */
+/* ============================================ */
+.main-header {
+    background: linear-gradient(to right, rgb(139, 0, 0), rgb(255, 0, 0), rgb(139, 0, 0));
+    padding: 15px 0;
+    border-bottom: 5px solid rgb(255, 215, 0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(255, 215, 0);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo-container .logo.logo-left {
+    animation: flotarIzquierda 3s ease-in-out infinite;
+}
+
+.logo-container .logo.logo-right {
+    animation: flotarDerecha 3s ease-in-out infinite;
+}
+
+.logo-container .logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgb(255, 215, 0);
+}
+
+.header-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-title h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-title h2 {
+    color: rgb(255, 215, 0);
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+@keyframes flotarIzquierda {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+}
+
+@keyframes flotarDerecha {
+    0%, 100% {
+        transform: translateY(0) rotate(3deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-3deg);
+    }
+}
+
+/* ============================================ */
+/* NAVBAR - SIN CAMBIOS (COMO ESTABA ESPECTACULAR) */
+/* ============================================ */
+.navbar-bomberos {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2px;
+}
+
+.nav-item .nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    margin: 5px;
+    background: rgba(240, 240, 240, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-item .nav-link:hover {
+    color: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.1);
+    border-color: rgb(255, 0, 0);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
+
+.nav-item .nav-link.active {
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
+    border-color: rgb(255, 215, 0);
+}
+
+/* ============================================ */
+/* 3. HISTORIA CON FONDO TRANSPARENTE */
+/* ============================================ */
+.historia-section {
+    background: transparent;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 0, 0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid rgb(255, 215, 0);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.historia-texto p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid rgb(255, 0, 0);
+}
+
+.galeria-title {
+    color: rgb(139, 0, 0);
+    text-align: center;
+    margin: 40px 0 25px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.epoca-title {
+    color: rgb(255, 0, 0);
+    border-left: 4px solid rgb(255, 215, 0);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* ============================================ */
+/* 4. IMÁGENES CON FONDO TRANSPARENTE */
+/* ============================================ */
+.imagen-placeholder {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: transparent;
+}
+
+.imagen-placeholder span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+.imagen-placeholder.antigua {
+    border-color: rgb(150, 150, 150);
+    background: transparent;
+}
+
+.imagen-placeholder.actual {
+    border-color: rgb(255, 0, 0);
+    background: transparent;
+}
+
+.imagen-placeholder:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-desc {
+    text-align: center;
+    color: rgb(139, 0, 0);
+    font-style: italic;
+    font-size: 1rem;
+    background: transparent;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(139, 0, 0, 0.2);
+}
+
+/* ============================================ */
+/* FOOTER - MODIFICADO (SIN SÍMBOLO ∞) */
+/* ============================================ */
+.main-footer {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 5px solid rgb(255, 215, 0);
+    margin-top: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content .footer-lema {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 215, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-content .footer-anio {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.footer-content .footer-anio::before {
+    content: "Desde ";
+    font-weight: normal;
+}
+
+/* ELIMINADO: Símbolo ∞ después del año */
+/* .footer-content .footer-anio::after {
+    content: " ∞";
+    color: rgb(255, 215, 0);
+    font-size: 1.8rem;
+    margin-left: 5px;
+} */
+
+/* ============================================ */
+/* RESPONSIVE - CON AJUSTES PARA EL FONDO */
+/* ============================================ */
+/* Mobile 320px - 767px */
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    /* AJUSTE ESCUDO EN MÓVIL */
+    body::after {
+        background-size: 350px; /* MÁS PEQUEÑO EN MÓVIL */
+        opacity: 0.12; /* MÁS TRANSPARENTE EN MÓVIL */
+    }
+    
+    body::before {
+        background-color: rgba(255, 255, 255, 0.75); /* AJUSTE OPACIDAD MÓVIL */
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .logo-container .logo {
+        width: 90px;
+        height: 90px;
+        margin: 10px auto;
+    }
+    
+    .header-title {
+        order: -1;
+        margin-bottom: 10px;
+    }
+    
+    .header-title h1 {
+        font-size: 1.5rem !important;
+        letter-spacing: 1px;
+    }
+    
+    .header-title h2 {
+        font-size: 1.1rem !important;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .nav-item .nav-link {
+        padding: 12px 20px !important;
+        font-size: 1rem;
+        width: 90%;
+        text-align: center;
+        margin: 3px 0;
+    }
+    
+    .main-content {
+        padding: 20px 10px;
+    }
+    
+    .historia-section {
+        padding: 20px !important;
+        margin: 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .historia-texto p {
+        font-size: 1rem !important;
+        padding: 15px !important;
+    }
+    
+    .galeria-title {
+        font-size: 1.4rem !important;
+        margin: 30px 0 20px !important;
+    }
+    
+    .epoca-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .imagen-placeholder {
+        height: 160px !important;
+    }
+    
+    .imagen-placeholder span {
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+    
+    .footer-lema {
+        font-size: 1.3rem !important;
+    }
+    
+    .footer-anio {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ============================================ */
+/* SECCIÓN ALOJAMIENTOS - NUEVOS ESTILOS MODIFICADOS */
+/* ============================================ */
+
+/* Estilos generales de la sección */
+.alojamientos-section {
+    background: transparent;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 0, 0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tarjeta de alojamiento */
+.alojamiento-card {
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alojamiento-card:hover {
+    transform: translateY(-5px);
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+}
+
+/* Imagen del alojamiento */
+.alojamiento-imagen {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.alojamiento-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.alojamiento-card:hover .alojamiento-imagen img {
+    transform: scale(1.05);
+}
+
+/* Información del alojamiento */
+.alojamiento-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.alojamiento-nombre {
+    color: rgb(255, 0, 0);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(255, 215, 0);
+    padding-bottom: 8px;
+}
+
+.alojamiento-desc {
+    color: rgb(0, 0, 0);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Detalles de contacto */
+.alojamiento-contacto {
+    margin-bottom: 15px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+}
+
+.contacto-item i {
+    color: rgb(255, 0, 0);
+    margin-right: 10px;
+    margin-top: 2px;
+    width: 16px;
+    text-align: center;
+}
+
+/* Botones de acción */
+.alojamiento-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-mapa, .btn-web {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-mapa {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.btn-mapa:hover {
+    background: rgb(200, 0, 0);
+    border-color: rgb(200, 0, 0);
+    transform: translateY(-2px);
+}
+
+.btn-web {
+    background: transparent;
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.btn-web:hover {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+}
+
+/* Tarjetas de información adicional */
+.info-card {
+    background: transparent;
+    border: 2px solid rgba(139, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h4 {
+    color: rgb(139, 0, 0);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(255, 215, 0);
+    padding-bottom: 8px;
+}
+
+.info-card h4 i {
+    color: rgb(255, 0, 0);
+    margin-right: 8px;
+}
+
+.info-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.info-card li {
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.info-card p {
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+
+/* Tablet 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* AJUSTE ESCUDO EN TABLET */
+    body::after {
+        background-size: 450px;
+        opacity: 0.14;
+    }
+    
+    body::before {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .header-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-title h2 {
+        font-size: 1.3rem;
+    }
+    
+    .logo-container .logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .nav-item .nav-link {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .historia-texto p {
+        font-size: 1.05rem;
+    }
+    
+    .footer-lema {
+        font-size: 1.6rem;
+    }
+}
+
+/* Desktop 1024px+ */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .header-title h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-container .logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .nav-item .nav-link {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .historia-texto p {
+        font-size: 1.1rem;
+    }
+    
+    .footer-lema {
+        font-size: 1.8rem;
+    }
+}
+
+/* Desktop grande 1200px+ */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .header-title h1 {
+        font-size: 2.4rem;
+    }
+    
+    .header-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .logo-container .logo {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .section-title {
+        font-size: 2.8rem;
+    }
+    
+    .historia-texto p {
+        font-size: 1.15rem;
+    }
+    
+    .footer-lema {
+        font-size: 2rem;
+    }
+}
+

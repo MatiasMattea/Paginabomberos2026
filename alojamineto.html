@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/escudo-bomberos.png">
+
+    
+    <title>Cuerpo de Bomberos Voluntarios de Villa María - Alojamientos</title>
+    
+    
+</head>
+<body>
+    <!-- Header con logos -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo izquierdo -->
+                <div class="logo-container">
+                    <img src="images/escudocuartel.jpeg" alt="Logo izquierdo Bomberos" class="logo logo-left">
+                </div>
+                
+                <!-- Título central -->
+                <div class="header-title">
+                    <h1>Cuerpo de Bomberos Voluntarios</h1>
+                    <h2>de Villa María</h2>
+                </div>
+                
+                <!-- Logo derecho -->
+                <div class="logo-container">
+                    <img src="images/escudoescuela.jpeg" alt="Logo derecho Bomberos" class="logo logo-right">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar-bomberos">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./main.html" class="nav-link">INICIO</a></li>
+                <li class="nav-item"><a href="index.html#historia" class="nav-link">CUARTEL</a></li>
+                <li class="nav-item"><a href="#fiesta" class="nav-link">FIESTA</a></li>
+                <li class="nav-item"><a href="./alojamineto.html" class="nav-link active">ALOJAMIENTOS</a></li>
+                <li class="nav-item"><a href="#contactos" class="nav-link">CONTACTOS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Sección Alojamientos -->
+        <section id="alojamientos" class="section alojamientos-section">
+            <div class="container">
+                <h2 class="section-title">ALOJAMIENTOS EN VILLA MARÍA</h2>
+                
+                <!-- Introducción -->
+                <div class="historia-texto">
+                    <p>Para los visitantes que quieran acompañarnos en nuestra fiesta, hemos recopilado 
+                    los principales alojamientos disponibles en Villa María y sus alrededores.</p>
+                    
+                    <p>Todos los establecimientos cuentan con servicios de calidad y están ubicados 
+                    en puntos estratégicos de la ciudad para facilitar su acceso a las actividades.</p>
+                </div>
+
+                <!-- Grid de Alojamientos -->
+                <div class="row alojamientos-grid">
+                    
+                    <!-- Hotel 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hoteles/Hotel Republica.png" alt="Hotel Plaza Villa María" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Hotel Republica Villa María</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Hotel 4 estrellas en el centro de la ciudad. 
+                                    Habitaciones amplias con todas las comodidades.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Av. Sabattini 1250, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-1234</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-wifi"></i>
+                                            <span>WiFi gratuito • Aire acondicionado • Estacionamiento</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://maps.app.goo.gl/edNR3Z4EV5cW97pN8" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://hotelrepublicavm.com.ar/" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hotel-ejemplo2.jpg" alt="Cabañas del Río" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Cabañas del Río</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Cabañas totalmente equipadas a orillas del río Ctalamochita. 
+                                    Ideal para familias y grupos.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Ruta 158 km 12.5, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-5678</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-home"></i>
+                                            <span>4 cabañas • Parrilla • Pileta • Juegos infantiles</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://goo.gl/maps/ejemplocabanas" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://www.cabanasdelrio.com.ar" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hotel-ejemplo3.jpg" alt="Posada del Sol" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Posada del Sol</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Hostal familiar con trato personalizado. Ambiente cálido y 
+                                    desayuno casero incluido.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>San Martín 845, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-9012</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-utensils"></i>
+                                            <span>Desayuno incluido • Cocina común • Jardín</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://goo.gl/maps/ejemploposada" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://www.posadadelsolvm.com.ar" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hotel-ejemplo4.jpg" alt="Hotel Ejecutivo" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Hotel Ejecutivo VM</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Moderno hotel de negocios con salas de conferencias 
+                                    y servicio de room service 24hs.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Bv. Illia 2200, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-3456</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-business-time"></i>
+                                            <span>Sala de reuniones • Gimnasio • Bar</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://goo.gl/maps/ejemploejecutivo" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://www.hotelejecutivovm.com.ar" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hotel-ejemplo5.jpg" alt="Camping Municipal" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Camping Municipal</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Espacio verde municipal con parcelas para carpas y 
+                                    motorhomes. Servicios básicos incluidos.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Costanera del Río, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-7890</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-campground"></i>
+                                            <span>Parcelas • Baños • Electricidad • Parrillas</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://goo.gl/maps/ejemplocamping" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://www.villamaria.gov.ar/camping" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hotel 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="alojamiento-card">
+                            <div class="alojamiento-imagen">
+                                <img src="images/hotel-ejemplo6.jpg" alt="Departamentos Temporarios" class="img-fluid">
+                            </div>
+                            <div class="alojamiento-info">
+                                <h3 class="alojamiento-nombre">Departamentos VM</h3>
+                                <div class="alojamiento-detalles">
+                                    <p class="alojamiento-desc">Departamentos completamente amueblados para estadías 
+                                    cortas y largas. Opción por semana con descuento.</p>
+                                    
+                                    <div class="alojamiento-contacto">
+                                        <div class="contacto-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Av. Velez Sarsfield 550, Villa María</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(0353) 452-4321</span>
+                                        </div>
+                                        <div class="contacto-item">
+                                            <i class="fas fa-building"></i>
+                                            <span>2 dormitorios • Cocina • Lavadero • WiFi</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alojamiento-botones">
+                                        <a href="https://goo.gl/maps/ejemplodepartamentos" target="_blank" class="btn-mapa">
+                                            <i class="fas fa-map-marked-alt"></i> Ver en Maps
+                                        </a>
+                                        <a href="https://www.departamentosvm.com.ar" target="_blank" class="btn-web">
+                                            <i class="fas fa-globe"></i> Sitio Web
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Información adicional -->
+                <div class="info-adicional mt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h4><i class="fas fa-info-circle"></i> Información importante</h4>
+                                <ul>
+                                    <li>Reservar con anticipación durante fechas de eventos</li>
+                                    <li>Confirmar políticas de cancelación</li>
+                                    <li>Algunos alojamientos ofrecen descuentos para bomberos</li>
+                                    <li>Verificar medios de pago aceptados</li>
+                                    <li>Contactar directamente para consultar precios y disponibilidad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h4><i class="fas fa-car"></i> Cómo llegar</h4>
+                                <p>Villa María se encuentra en el centro de la provincia de Córdoba, 
+                                accesible por:</p>
+                                <ul>
+                                    <li><strong>Ruta Nacional 9:</strong> Desde Córdoba o Rosario</li>
+                                    <li><strong>Ruta Provincial 158:</strong> Conexión con localidades vecinas</li>
+                                    <li><strong>Estación de Ómnibus:</strong> Servicios desde todo el país</li>
+                                    <li><strong>Aeropuerto más cercano:</strong> Córdoba (120km)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-lema">HOMBRES SIN HORARIOS; NI HONORARIOS</p>
+                <p class="footer-anio">1951</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
+</body>
+</html>
