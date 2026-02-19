@@ -1075,6 +1075,333 @@ body {
     }
 }
 
+/* ============================================ */
+/* SECCIÓN CUARTEL - NUEVOS ESTILOS */
+/* ============================================ */
+
+.cuartel-section {
+    background: transparent;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid $color-primario;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================ */
+/* MENÚ LATERAL IZQUIERDO (STICKY) */
+/* ============================================ */
+.menu-lateral {
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    position: sticky;
+    top: 100px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        border-color: $color-primario;
+        box-shadow: 0 8px 20px rgba(255, 0, 0, 0.1);
+    }
+}
+
+.menu-lateral-titulo {
+    color: $color-primario;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $color-oro;
+    letter-spacing: 2px;
+}
+
+.menu-lateral-item {
+    margin-bottom: 20px;
+}
+
+.menu-categoria {
+    color: $color-secundario;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid $color-oro;
+    
+    i {
+        color: $color-primario;
+        margin-right: 8px;
+        width: 20px;
+    }
+}
+
+.menu-subitem {
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.menu-enlace {
+    display: block;
+    color: $color-negro;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    
+    i {
+        color: $color-primario;
+        margin-right: 10px;
+        width: 18px;
+        font-size: 0.9rem;
+    }
+    
+    &:hover {
+        background: rgba(255, 0, 0, 0.1);
+        color: $color-primario;
+        transform: translateX(5px);
+    }
+}
+
+.menu-nota {
+    margin-top: 25px;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    color: $color-secundario;
+    
+    i {
+        color: $color-primario;
+        margin-right: 5px;
+    }
+}
+
+/* ============================================ */
+/* SECCIONES DE CONTENIDO */
+/* ============================================ */
+.cuartel-seccion {
+    margin-bottom: 60px;
+    scroll-margin-top: 100px;
+}
+
+.cuartel-seccion-titulo {
+    color: $color-primario;
+    font-size: 2rem;
+    margin: 40px 0 30px;
+    font-weight: bold;
+    border-bottom: 3px solid $color-oro;
+    padding-bottom: 10px;
+    display: inline-block;
+    
+    i {
+        margin-right: 10px;
+        color: $color-secundario;
+    }
+}
+
+.vehiculos-titulo-principal {
+    margin-top: 60px;
+    font-size: 2.2rem;
+    display: block;
+    width: 100%;
+}
+
+/* ============================================ */
+/* PERSONAL ACTIVO */
+/* ============================================ */
+.personal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.personal-categoria {
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        border-color: $color-primario;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(255, 0, 0, 0.1);
+    }
+}
+
+.personal-categoria-titulo {
+    color: $color-secundario;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid $color-oro;
+    padding-bottom: 8px;
+    
+    i {
+        color: $color-primario;
+        margin-right: 10px;
+    }
+}
+
+.personal-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.personal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid $color-oro;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba(255, 0, 0, 0.05);
+        transform: translateX(5px);
+    }
+}
+
+.personal-nombre {
+    color: $color-negro;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.personal-rango {
+    color: $color-primario;
+    font-size: 0.9rem;
+    font-style: italic;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+.personal-total {
+    text-align: right;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    border: 1px dashed $color-primario;
+    
+    p {
+        color: $color-secundario;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
+    i {
+        color: $color-primario;
+        margin-right: 8px;
+    }
+}
+
+/* ============================================ */
+/* VEHÍCULOS */
+/* ============================================ */
+.vehiculos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.vehiculo-card {
+    display: flex;
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    scroll-margin-top: 100px;
+    
+    &:hover {
+        border-color: $color-primario;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
+    }
+}
+
+.vehiculo-imagen {
+    flex: 0 0 300px;
+    height: 220px;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .vehiculo-card:hover & img {
+        transform: scale(1.05);
+    }
+}
+
+.vehiculo-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehiculo-numero {
+    color: $color-primario;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.vehiculo-nombre {
+    color: $color-secundario;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.vehiculo-descripcion {
+    color: $color-negro;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    
+    strong {
+        color: $color-primario;
+    }
+}
+
+.vehiculo-caracteristicas {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    
+    span {
+        background: rgba(255, 0, 0, 0.1);
+        color: $color-secundario;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    
+    i {
+        color: $color-primario;
+        margin-right: 5px;
+    }
+}
+
 /* Tablet 768px - 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     /* AJUSTE ESCUDO EN TABLET */
