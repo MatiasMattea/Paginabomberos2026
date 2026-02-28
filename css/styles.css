@@ -650,7 +650,7 @@ body::after {
     padding: 30px;
     border: 3px solid rgb(255, 215, 0);
     border-radius: 20px;
-    background: transparent;
+    background: rgb(255, 255, 255);
     position: relative;
     overflow: hidden;
 }
@@ -720,7 +720,7 @@ body::after {
 }
 
 .invitacion-destacado {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: rgb(139, 0, 0);
     font-style: italic;
     border-top: 2px dashed rgb(255, 215, 0);
@@ -754,7 +754,7 @@ body::after {
 
 /* MENÚ CARDS */
 .menu-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgb(255, 0, 0);
     border-radius: 12px;
     padding: 25px 15px;
@@ -796,9 +796,10 @@ body::after {
 
 .menu-item {
     color: rgb(0, 0, 0);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .menu-descripcion {
@@ -810,7 +811,7 @@ body::after {
 
 /* CATERING */
 .catering-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgb(255, 215, 0);
     border-radius: 15px;
     padding: 30px;
@@ -823,16 +824,17 @@ body::after {
 
 .catering-nombre {
     color: rgb(255, 0, 0);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .catering-descripcion {
     color: rgb(0, 0, 0);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-weight: bold
 }
 
 .catering-contacto p {
@@ -880,7 +882,7 @@ body::after {
 
 /* UBICACIÓN - IMAGEN DEL LUGAR */
 .lugar-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgb(255, 0, 0);
     border-radius: 15px;
     overflow: hidden;
@@ -911,12 +913,12 @@ body::after {
 
 .lugar-info {
     padding: 20px;
-    background: transparent;
+    background: rgb(255, 255, 255);
 }
 
 .lugar-nombre {
     color: rgb(255, 0, 0);
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -934,7 +936,7 @@ body::after {
 
 .lugar-referencia {
     color: rgb(139, 0, 0);
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-style: italic;
     border-left: 3px solid rgb(255, 215, 0);
     padding-left: 15px;
@@ -942,7 +944,7 @@ body::after {
 
 /* MAPA */
 .mapa-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgb(255, 0, 0);
     border-radius: 15px;
     padding: 20px;
@@ -977,7 +979,7 @@ body::after {
 }
 
 .btn-mapa-grande:hover {
-    background: transparent;
+    background: rgb(255, 255, 255);
     color: rgb(255, 0, 0);
     transform: translateY(-2px);
 }
@@ -988,8 +990,8 @@ body::after {
 
 /* TARJETAS DE INFORMACIÓN ADICIONAL */
 .info-card-fiesta {
-    background: transparent;
-    border: 2px solid rgba(255, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.993);
+    border: 5px solid rgba(255, 0, 0, 0.2);
     border-radius: 12px;
     padding: 25px 15px;
     text-align: center;
@@ -1011,17 +1013,17 @@ body::after {
 
 .info-card-fiesta h4 {
     color: rgb(139, 0, 0);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
     font-weight: bold;
-    border-bottom: 2px solid rgb(255, 215, 0);
+    border-bottom: 3px solid rgb(255, 215, 0);
     padding-bottom: 8px;
 }
 
 .info-card-fiesta p {
     color: rgb(0, 0, 0);
     margin-bottom: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .info-card-fiesta .precio {
