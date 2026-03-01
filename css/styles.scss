@@ -41,7 +41,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.7); /* MÁS OPACO PARA MEJOR LEGIBILIDAD */
+        background-color: rgba(255, 255, 255, 0.5); /* MÁS OPACO PARA MEJOR LEGIBILIDAD */
         z-index: -1;
     }
     
@@ -52,12 +52,12 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('/images/escudo75.jpeg');
-        background-size: 600px; /* MÁS GRANDE */
+        background-image: url('/images/prueba-1-logo75.png');
+        background-size: 700px; /* MÁS GRANDE */
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        opacity: 0.15; /* MÁS TRANSPARENTE EL ESCUDO */
+        opacity: 0.80; /* MÁS TRANSPARENTE EL ESCUDO */
         z-index: -2;
         pointer-events: none;
     }
@@ -223,13 +223,14 @@ body {
     p {
         margin-bottom: 25px;
         line-height: 1.8;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         color: $color-negro;
         text-align: justify;
         background: transparent;
         padding: 20px;
         border-radius: 10px;
         border-left: 5px solid $color-primario;
+        font-weight: bold;
     }
 }
 
@@ -237,7 +238,7 @@ body {
     color: $color-secundario;
     text-align: center;
     margin: 40px 0 25px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -269,7 +270,7 @@ body {
         font-weight: bold;
         text-align: center;
         font-size: 1.2rem;
-        color: $color-negro;
+        color: rgb(255, 255, 255);
         padding: 15px;
     }
     
@@ -280,7 +281,7 @@ body {
     
     &.actual {
         border-color: $color-primario;
-        background: transparent;
+        background: url('/images/DSCN5623.JPG') center / cover no-repeat;
     }
     
     &:hover {
@@ -304,7 +305,7 @@ body {
 /* FOOTER - MODIFICADO (SIN SÍMBOLO ∞) */
 /* ============================================ */
 .main-footer {
-    background: $color-primario;
+    background: url('/images/fondofoo1.png') center / cover no-repeat;
     color: $color-blanco;
     padding: 30px 0;
     text-align: center;
@@ -334,13 +335,7 @@ body {
             font-weight: normal;
         }
         
-        /* ELIMINADO: Símbolo ∞ después del año */
-        /* &::after {
-            content: " ∞";
-            color: $color-oro;
-            font-size: 1.8rem;
-            margin-left: 5px;
-        } */
+       
     }
 }
 
@@ -465,7 +460,7 @@ body {
 
 /* Tarjeta de alojamiento */
 .alojamiento-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgba(255, 0, 0, 0.3);
     border-radius: 12px;
     overflow: hidden;
@@ -499,21 +494,6 @@ body {
         transform: scale(1.05);
     }
 }
-
-/* ELIMINADO: Estilos para precio
-.alojamiento-precio {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: $color-primario;
-    color: $color-blanco;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-*/
 
 /* Información del alojamiento */
 .alojamiento-info {
@@ -610,7 +590,7 @@ body {
 
 /* Tarjetas de información adicional */
 .info-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgba(139, 0, 0, 0.2);
     border-radius: 10px;
     padding: 20px;
@@ -653,7 +633,7 @@ body {
 /* ============================================ */
 
 .fiesta-section {
-    background: rgb(255, 255, 255);
+    background: transparent;
     padding: 40px;
     border-radius: 15px;
     border: 2px solid $color-primario;
@@ -667,7 +647,7 @@ body {
     padding: 30px;
     border: 3px solid $color-oro;
     border-radius: 20px;
-    background: transparent;
+    background: rgb(255, 255, 255);
     position: relative;
     overflow: hidden;
     
@@ -737,7 +717,7 @@ body {
 }
 
 .invitacion-destacado {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: $color-secundario;
     font-style: italic;
     border-top: 2px dashed $color-oro;
@@ -771,7 +751,7 @@ body {
 
 /* MENÚ CARDS */
 .menu-card {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid $color-primario;
     border-radius: 12px;
     padding: 25px 15px;
@@ -828,7 +808,7 @@ body {
 
 /* CATERING */
 .catering-card {
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid $color-oro;
     border-radius: 15px;
     padding: 30px;
@@ -841,23 +821,24 @@ body {
 
 .catering-nombre {
     color: $color-primario;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .catering-descripcion {
     color: $color-negro;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .catering-contacto {
     p {
         color: $color-secundario;
         margin-bottom: 8px;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     i {
@@ -900,7 +881,7 @@ body {
 
 /* UBICACIÓN - IMAGEN DEL LUGAR */
 .lugar-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid $color-primario;
     border-radius: 15px;
     overflow: hidden;
@@ -962,7 +943,7 @@ body {
 
 /* MAPA */
 .mapa-card {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid $color-primario;
     border-radius: 15px;
     padding: 20px;
@@ -1008,7 +989,7 @@ body {
 
 /* TARJETAS DE INFORMACIÓN ADICIONAL */
 .info-card-fiesta {
-    background: transparent;
+    background: rgb(255, 255, 255);
     border: 2px solid rgba(255, 0, 0, 0.2);
     border-radius: 12px;
     padding: 25px 15px;
@@ -1064,13 +1045,13 @@ body {
     
     p {
         color: $color-secundario;
-        font-size: 1.2rem;
+        font-size: 3rem;
         margin-bottom: 10px;
     }
     
     .lema-fiesta {
         color: $color-primario;
-        font-size: 1.4rem;
+        font-size: 3rem;
         font-style: italic;
         font-weight: bold;
     }
@@ -1221,7 +1202,7 @@ body {
 }
 
 .personal-categoria {
-    background: transparent;
+    background: rgb(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 0, 0, 0.2);
     border-radius: 12px;
     padding: 20px;
@@ -1274,6 +1255,7 @@ body {
     color: $color-negro;
     font-weight: 500;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .personal-rango {
@@ -1289,13 +1271,13 @@ body {
     text-align: right;
     margin-top: 20px;
     padding: 15px;
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(255, 215, 0, 0.5);
     border-radius: 10px;
     border: 1px dashed $color-primario;
     
     p {
         color: $color-secundario;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         margin: 0;
     }
     
@@ -1317,7 +1299,7 @@ body {
 
 .vehiculo-card {
     display: flex;
-    background: transparent;
+    background: rgb(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 0, 0, 0.3);
     border-radius: 15px;
     overflow: hidden;
@@ -1509,7 +1491,7 @@ body {
     }
     
     .historia-texto p {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
     }
     
     .footer-lema {
