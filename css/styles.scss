@@ -359,21 +359,25 @@ body {
         background-color: rgba(255, 255, 255, 0.75); // AJUSTE OPACIDAD MÓVIL
     }
     
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .logo-container .logo {
-        width: 90px;
-        height: 90px;
-        margin: 10px auto;
-    }
+   /* HEADER - LOGOS UNO AL LADO DEL OTRO (FUERZA BRUTA) */
+.header-content .logo-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    margin: 5px 0 !important;
+}
+
+.header-content .logo-container .logo {
+    width: 70px !important;
+    height: 70px !important;
+    margin: 0 !important;
+}
     
     .header-title {
-        order: -1;
-        margin-bottom: 10px;
+            margin-bottom: 10px;
         
         h1 {
             font-size: 1.5rem !important;
@@ -877,8 +881,8 @@ body {
     }
 
     &:hover {
-        background-color: #8B0000;
-        color: #FFFFFF;
+        background-color: rgb(139, 0, 0);
+        color: rgb(255, 255, 255);
         text-decoration: none;
     }
 
@@ -1203,10 +1207,24 @@ body {
 /* PERSONAL ACTIVO */
 /* ============================================ */
 .personal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 25px;
     margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Opcional: si querés centrar las categorías */
+.personal-grid {
+    align-items: center;
+}
+
+/* Opcional: cada categoría con ancho máximo controlado */
+.personal-categoria {
+    width: 100%;
+    max-width: 800px; /* Opcional: evitás que se estiren demasiado en pantallas gigantes */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .personal-categoria {
@@ -1302,7 +1320,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .vehiculo-card {
@@ -1335,6 +1353,74 @@ body {
     
     .vehiculo-card:hover & img {
         transform: scale(1.05);
+    }
+}
+
+/* ============================================ */
+/* VEHÍCULOS - VERSIÓN MÓVIL (hasta 700px) */
+/* ============================================ */
+@media (max-width: 700px) {
+    .vehiculo-card {
+        flex-direction: column; /* Cambia a columna: imagen arriba, texto abajo */
+    }
+    
+    .vehiculo-imagen {
+        flex: 0 0 auto; /* Quita el ancho fijo */
+        width: 100%;    /* La imagen ocupa todo el ancho */
+        height: 200px;  /* Altura ajustada para móvil */
+    }
+    
+    .vehiculo-info {
+        padding: 15px; /* Reducí el padding para que entre mejor */
+    }
+    
+    .vehiculo-numero {
+        font-size: 1.3rem; /* Un poco más chico */
+    }
+    
+    .vehiculo-nombre {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .vehiculo-descripcion {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .vehiculo-caracteristicas {
+        flex-wrap: wrap; /* Si no entran, se envuelven */
+        gap: 10px;
+    }
+}
+
+/* ============================================ */
+/* VEHÍCULOS - MÓVIL MUY CHICO (320px) */
+/* ============================================ */
+@media (max-width: 480px) {
+    .vehiculo-imagen {
+        height: 160px; /* Imagen más chica */
+    }
+    
+    .vehiculo-info {
+        padding: 10px;
+    }
+    
+    .vehiculo-numero {
+        font-size: 1.1rem;
+    }
+    
+    .vehiculo-nombre {
+        font-size: 1rem;
+    }
+    
+    .vehiculo-descripcion {
+        font-size: 0.85rem;
+    }
+    
+    .vehiculo-caracteristicas span {
+        padding: 4px 8px;
+        font-size: 0.8rem;
     }
 }
 
