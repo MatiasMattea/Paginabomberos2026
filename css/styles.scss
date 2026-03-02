@@ -450,6 +450,51 @@ body {
 }
 
 /* ============================================ */
+/* MENÚ HORIZONTAL PARA MÓVIL */
+/* ============================================ */
+@media (max-width: 767px) {
+    .navbar-bomberos .nav-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .navbar-bomberos .nav-item {
+        flex: 0 1 auto;
+    }
+    
+    .navbar-bomberos .nav-link {
+        display: block;
+        padding: 8px 12px;
+        background-color: rgba(240, 240, 240, 0.8);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    /* Ocultar hamburguesa si existe */
+    .menu-icon,
+    #menu-toggle {
+        display: none;
+    }
+}
+
+/* Ajuste extra para pantallas muy chicas */
+@media (max-width: 480px) {
+    .navbar-bomberos .nav-link {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ============================================ */
 /* SECCIÓN ALOJAMIENTOS - NUEVOS ESTILOS MODIFICADOS */
 /* ============================================ */
 
