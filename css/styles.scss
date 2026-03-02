@@ -644,14 +644,16 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* INVITACIÓN PRINCIPAL */
-.invitacion-principal {
+/* ============================================ */
+/* INVITACIÓN - CORREGIDA */
+/* ============================================ */
+.invitation-principal {
     text-align: center;
     margin-bottom: 50px;
     padding: 30px;
     border: 3px solid $color-oro;
     border-radius: 20px;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
     position: relative;
     overflow: hidden;
     
@@ -668,6 +670,7 @@ body {
     }
 }
 
+
 .fiesta-titulo-grande {
     font-size: 3rem;
     color: $color-primario;
@@ -676,6 +679,23 @@ body {
     letter-spacing: 3px;
     text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
     margin-bottom: 15px;
+}
+
+/* Media query DESPUÉS */
+@media (max-width: 320px) {
+    body .fiesta-titulo-grande {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+    .fiesta-titulo-grande {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
 }
 
 .fiesta-subtitulo {
@@ -890,6 +910,33 @@ body {
         transform: translateY(1px);
     }
 }  
+
+/* ============================================ */
+/* INVITACIÓN - AJUSTE PARA 320px */
+/* ============================================ */
+@media (max-width: 320px) {
+    .invitation-principal {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .invitation-principal h2 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+    
+    .invitation-principal p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .invitation-principal::before {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+}
 
 /* UBICACIÓN - IMAGEN DEL LUGAR */
 .lugar-card {
