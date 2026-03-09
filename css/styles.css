@@ -338,7 +338,7 @@ body::after {
   /* AJUSTE ESCUDO EN MÓVIL */
   body::after {
     background-size: 350px;
-    opacity: 0.8;
+    opacity: 0.5;
   }
   body::before {
     background-color: rgba(255, 255, 255, 0.75);

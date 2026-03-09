@@ -369,7 +369,7 @@ body {
     /* AJUSTE ESCUDO EN MÓVIL */
     body::after {
         background-size: 350px; // MÁS PEQUEÑO EN MÓVIL
-        opacity: 0.8; // MÁS TRANSPARENTE EN MÓVIL
+        opacity: 0.5; // MÁS TRANSPARENTE EN MÓVIL
     }
     
     body::before {
