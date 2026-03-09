@@ -1118,7 +1118,7 @@ body::after {
 }
 
 .menu-lateral-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .menu-categoria {
@@ -1144,10 +1144,11 @@ body::after {
   display: block;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 2px 15px;
   border-radius: 8px;
   transition: all 0.3s ease;
   font-size: 0.95rem;
+  font-weight: bold;
 }
 .menu-enlace i {
   color: rgb(255, 0, 0);
@@ -1159,6 +1160,15 @@ body::after {
   background: rgba(255, 0, 0, 0.1);
   color: rgb(255, 0, 0);
   transform: translateX(5px);
+}
+
+.menu-enlace.active {
+  background: #c40937;
+  color: white;
+}
+
+.menu-enlace.active i {
+  color: white;
 }
 
 .menu-nota {
@@ -1179,7 +1189,7 @@ body::after {
 /* SECCIONES DE CONTENIDO */
 /* ============================================ */
 .cuartel-seccion {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   scroll-margin-top: 100px;
 }
 
@@ -1545,6 +1555,28 @@ body::after {
   .footer-lema {
     font-size: 2rem;
   }
+}
+#btn-arriba {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px 14px;
+  background: #800020;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#btn-arriba:hover {
+  background: #a00028;
 }
 
 /*# sourceMappingURL=styles.css.map */
